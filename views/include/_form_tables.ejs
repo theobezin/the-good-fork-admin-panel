@@ -1,0 +1,31 @@
+<!-- form handling-->
+<form action="/api/tables" method="POST" id="add_employee">
+    <div class="new_employee">
+        <div class="form-group">
+            <label for="table_number" class="text-light">Numéro de la table</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="table_number" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="table_number" class="text-light">Capacité de la table</label>
+            <select name="table_capacity" id="capacity-select">
+                <option value="">Choisissez un nombre de personnes</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Enregistrer</button>
+        </div>
+    </div>
+</form>
+<!-- /form handling-->

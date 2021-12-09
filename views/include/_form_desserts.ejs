@@ -1,0 +1,26 @@
+<!-- form handling-->
+<form action="/api/desserts" method="POST" id="add_employee">
+    <div class="new_employee">
+        <div class="form-group">
+            <label for="picture_url" class="text-light">URL de l'apercu du dessert</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="picture_url" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="name" class="text-light">Nom</label>
+            
+            <input type="text" name="name" value="" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="price" class="text-light">Prix (en €.)</label>
+            
+            <input type="text" name="price" value="" placeholder="">
+        </div>
+        
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Enregistrer</button>
+        </div>
+    </div>
+</form>
+<!-- /form handling-->

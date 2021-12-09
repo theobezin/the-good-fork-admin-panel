@@ -1,0 +1,54 @@
+<!-- include header-->
+<%- include('include/_header')%>
+<!-- /include header-->
+
+<!-- Main Site-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/list-table"> <i class="fas fa-angle-double-left"></i> Voir les tables</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Ajouter une table</h2>
+            <span class="text-light">Remplissez le formulaire suivant pour ajouter une table</span>
+        </div>
+        <!-- form handling-->
+<form method="POST" id="update_table">
+    <div class="new_employee">
+        <div class="form-group">
+            <label for="table_number" class="text-light">Numéro de la table</label>
+            <input type="hidden" name="id" value="<%= table._id %>">
+            <input type="text" name="table_number" value="<%= table.table_number %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="table_number" class="text-light">Capacité de la table</label>
+            <select name="table_capacity" id="capacity-select">
+                <option value="">Choisissez un nombre de personnes</option>
+                <option value="1" <%= table.table_capacity == 1 ? 'selected' : '' %>>1</option>
+                <option value="2" <%= table.table_capacity == 2 ? 'selected' : '' %>>2</option>
+                <option value="3" <%= table.table_capacity == 3 ? 'selected' : '' %>>3</option>
+                <option value="4" <%= table.table_capacity == 4 ? 'selected' : '' %>>4</option>
+                <option value="5" <%= table.table_capacity == 5 ? 'selected' : '' %>>5</option>
+                <option value="6" <%= table.table_capacity == 6 ? 'selected' : '' %>>6</option>
+                <option value="7" <%= table.table_capacity == 7 ? 'selected' : '' %>>7</option>
+                <option value="8" <%= table.table_capacity == 8 ? 'selected' : '' %>>8</option>
+                <option value="9" <%= table.table_capacity == 9 ? 'selected' : '' %>>9</option>
+                <option value="10" <%= table.table_capacity == 10 ? 'selected' : '' %>>10</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Enregistrer</button>
+        </div>
+    </div>
+</form>
+<!-- /form handling-->
+    </div>
+</main>
+<!-- /Main Site-->
+
+<!-- include footer-->
+<%- include('include/_footer')%>
+<!-- /include footer-->

@@ -1,0 +1,49 @@
+<!-- include header-->
+<%- include('include/_header')%>
+<!-- /include header-->
+
+<!-- Main Site-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/list-maincourse"> <i class="fas fa-angle-double-left"></i> Voir les plats</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Ajouter un plat</h2>
+            <span class="text-light">Remplissez le formulaire suivant pour ajouter un plat</span>
+        </div>
+        <!-- form handling-->
+<form  method="POST" id="update_maincourse">
+    <div class="new_employee">
+        <div class="form-group">
+            <label for="picture_url" class="text-light">URL de l'apercu du plat</label>
+            <input type="hidden" name="id" value="<%= maincourse._id %>">
+            <input type="text" name="picture_url" value="<%= maincourse.picture_url %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="name" class="text-light">Nom</label>
+            
+            <input type="text" name="name" value="<%= maincourse.name %>" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="price" class="text-light">Prix (en €.)</label>
+            
+            <input type="text" name="price" value="<%= maincourse.price %>" placeholder="">
+        </div>
+        
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Enregistrer</button>
+        </div>
+    </div>
+</form>
+<!-- /form handling-->
+    </div>
+</main>
+<!-- /Main Site-->
+
+<!-- include footer-->
+<%- include('include/_footer')%>
+<!-- /include footer-->

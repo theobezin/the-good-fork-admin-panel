@@ -1,0 +1,45 @@
+<!-- include header-->
+    <%- include('include/_header')%>
+<!-- /include header-->
+
+    <!-- Main Site-->
+    <main id="site-main">
+        <div class="container">
+
+            <div class="page-title">
+                <h1 class="text-center">Gestion des employés</h1>
+            </div>
+            
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-employee" class="border-shadow">
+                    <span class="text-gradient">Ajouter un employé <i class="fas fa-user"></i></span>
+                </a>
+            </div>
+
+            <!-- form handling-->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Email</th>
+                            <th>Profil</th>
+                            <th>Gérer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%- include('include/_show')%>
+                    </tbody>
+                </table>
+            </form>
+            
+            <!-- /form handling-->
+        </div>
+    </main>
+    <!-- /Main Site-->
+
+<!-- include footer-->
+<%- include('include/_footer')%>
+<!-- /include footer-->
